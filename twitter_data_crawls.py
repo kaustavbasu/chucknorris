@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jul 27 09:57:47 2018
-@author: hkaraky
+@author: kbasu
 Originally Implemented In Jupyter Ntbks, Transferred into a Spyder Script
 """
 import pandas as pd
