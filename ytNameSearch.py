@@ -18,7 +18,7 @@ import json
 import xlrd
 
 # API key for YouTube
-API_KEY = 'AIzaSyA_z7F9Cb82L90d7MobNYR17WSjcpk71jk'
+API_KEY = ''
 
 def get_authenticated_service():
   return build('youtube', 'v3', developerKey = API_KEY)
