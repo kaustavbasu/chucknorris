@@ -51,7 +51,7 @@ def videos_list_multiple_ids(client, **kwargs):
 
 def getRestaurantsFromYelp(location):
     restaurantsList = []
-    yelpApi = YelpAPI('i0_-J0g6lVcvsWv-TtAtdokJd-sooLR3FVVeYZ5Yje6BOenKi9bULEDjJRXq6DI6WywHqyk7evM3ngKS02WyvPo-R4ao1ZQxZCwjTXDJJDVGT8BdNEpOD2ii3NeUXHYx')
+    yelpApi = YelpAPI('')
     response = yelpApi.search_query(term='restaurant', location=location, sort_by='rating', limit=25, attributes='hot_and_new')
     restaurants = response['businesses']
     for i in range(len(restaurants)):
@@ -72,7 +72,7 @@ def getRestaurantsFromYelp(location):
 def crawlRestaurantOnYoutube(restaurantName, location):
     videoStats = []
     query = restaurantName+' restaurant '+location
-    googleApiKey = 'AIzaSyA_z7F9Cb82L90d7MobNYR17WSjcpk71jk'
+    googleApiKey = ''
     client = build('youtube', 'v3', developerKey = googleApiKey)
     response = search_list_by_keyword(client, part='snippet', maxResults=10, q=query,
         order='date', type='video')
