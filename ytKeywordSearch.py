@@ -21,7 +21,7 @@ from agefromname import AgeFromName
 
 
 # API key for YouTube
-API_KEY = 'AIzaSyA_z7F9Cb82L90d7MobNYR17WSjcpk71jk'
+API_KEY = ''
 # Array to hold all vidoes returned by the API
 VIDEOS = []
 
