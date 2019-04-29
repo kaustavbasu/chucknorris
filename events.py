@@ -56,7 +56,7 @@ def videos_list_multiple_ids(client, **kwargs):
 def getEventsFromYelp(location):
     eventsList = []
     startTime = dp.parse((datetime.now() + timedelta(days=7)).isoformat()).strftime('%s')
-    yelpApi = YelpAPI('i0_-J0g6lVcvsWv-TtAtdokJd-sooLR3FVVeYZ5Yje6BOenKi9bULEDjJRXq6DI6WywHqyk7evM3ngKS02WyvPo-R4ao1ZQxZCwjTXDJJDVGT8BdNEpOD2ii3NeUXHYx')
+    yelpApi = YelpAPI('')
     response = yelpApi.event_search_query(location=location, sort_by='desc', limit=50, sort_on='popularity', start_date=startTime)
     events = response['events']
     for i in range(len(events)):
@@ -74,7 +74,7 @@ def getEventsFromYelp(location):
 def crawlEventOnYoutube(eventName, location):
     videoStats = []
     query = eventName+' '+location
-    googleApiKey = 'AIzaSyA_z7F9Cb82L90d7MobNYR17WSjcpk71jk'
+    googleApiKey = ''
     client = build('youtube', 'v3', developerKey = googleApiKey)
     response = search_list_by_keyword(client, part='snippet', maxResults=10, q=query,
         order='date', type='video')
